@@ -8,11 +8,10 @@ env:
         - secure: "Kg9j3taojHXqdyDDTrQwA8YI2E7ix6+q+qkLjwfaRUhMFk/b9phEKRfSvGKxR4LZAQ4SsnscPk7HQIHK87tK9aiBbrsUeRXxmpsldcl8sHiwb4hFeX2LpyHvRLvNMUDa9RWC38GA3sFb5rPvb1ClBs+Uw82VM5DvmS6Xbb57hd1Bzqn5EeSGLtammxAm2EAKZ1QQpAM6x4VKzY035pqQ06zppBaCS9bdmCo/t9/5aXP+iE8rr6EN8rBPB7Vruacy9uijjosW3jOTaOrjbmFGh4o/yMVRNniHcvlF2dOwf3ejgy+OUb1UinejFWI32/fXm6KIQ9GEBsEEH7h6rYH7epeLfzGsVdLfF8sPLxLE5DRg8qTrxJHDZjebabFMHN01hylArTtapwBSEOYpnqmwwgBL+xvjBwzp/SDtYyAO1Glr9O05TdU2/l4g6+3ZRMZluzF4v9CU3tg8OY480Mg9zUNGXVqhJ+VXqXmTZ6hM56Hl8rZnI6io7f3id0AkGcPPmSmiu+CH6FVJbIB97Vhfb8n+PvZRndtVZ6GOl6scPEnYf3qnxTw2LECzs1oje4NyzZcPdN3SxOYb6kL2DHzs0IEZzyUj43NA/soVpLwub3Emu6umT104RlknTuCUctt6DFd8O5QYOQ7FEqrwOHArpVKTEDfl8wmdi4y8p4cwv8w="
 
 before_script:
-    - go get -u -v github.com/spf13/hugo
+    - go get -v github.com/spf13/hugo
 
 script:
     - git clone https://github.com/hbpasti/heather-hugo ./themes/heather-hugo
-    - hugo
 
 after_success:
     - bash deploy.sh
